@@ -1,0 +1,51 @@
+.enjoyjourney {
+	height: 64.4rem;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.journey-bg-image {
+		// display: none;
+	}
+	.enjoyjourney-content {
+		position: relative;
+		z-index: 2;
+		text-align: center;
+		padding: 33px 0 20px;
+		.menu-opened & {
+			z-index: 1;
+		}
+		h2 {
+			font-size: 9.2rem;
+			color: $white;
+			line-height: 1;
+			margin-bottom: 36px;
+			letter-spacing: -1.2px;
+			@include media-breakpoint-down(sm) {
+				font-size: 4rem;
+			}
+		}
+		.btn-signup {
+			padding: 10px 45px;
+			border-radius: 25px;
+			text-transform: uppercase;
+			margin-bottom: 29px;
+		}
+		p {
+			font-size: 1.8rem;
+			color: $white;
+			line-height: 3;
+			-moz-transform: matrix( 1.00231403661733,0,0,1.02765388046387,0,0);
+			-webkit-transform: matrix( 1.00231403661733,0,0,1.02765388046387,0,0);
+			-ms-transform: matrix( 1.00231403661733,0,0,1.02765388046387,0,0);
+		}
+		.enjoyjourney-subcribe {
+			color: $orange;
+			text-decoration: underline dotted;
+			&:hover {
+				color: $yellow;
+			}
+		}
+	}
+}

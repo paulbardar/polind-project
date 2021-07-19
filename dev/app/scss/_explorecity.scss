@@ -1,0 +1,98 @@
+.explorecity {
+	padding: 66px 0 140px;
+	background-color: $xlightgray;
+	position: relative;
+	overflow: hidden;
+	.bg-cityname {
+		position: absolute;
+		width: 50%;
+		height: 50%;
+		z-index: 2;
+		right: 2%;
+		bottom: -30px;
+		font-size: 12.2rem;
+		font-weight: bold;
+		line-height: 0.754;
+		text-transform: uppercase;
+		letter-spacing: -2px;
+		width: 350px;
+		word-break: break-word;
+		-moz-transform: matrix( 2.91039964994626,0,0,2.90749869035873,0,0);
+	  	-webkit-transform: matrix( 2.91039964994626,0,0,2.90749869035873,0,0);
+	  	-ms-transform: matrix( 2.91039964994626,0,0,2.90749869035873,0,0);
+		text-shadow: 0px 0px 125px rgba(141, 148, 169, 0.25);
+		color: rgba(255, 255, 255, 0.5);
+		@include media-breakpoint-down(md) {
+			top: 70%;
+		}
+		.menu-opened & {
+			z-index: 1;
+		}
+		@include media-breakpoint-down(md) {
+			top: 50%;
+			left: 50%;
+			-moz-transform: matrix( 2.91039964994626,0,0,2.90749869035873,0,0) translate(0%, 6%);
+		  	-webkit-transform: matrix( 2.91039964994626,0,0,2.90749869035873,0,0) translate(0%, 6%);
+		  	-ms-transform: matrix( 2.91039964994626,0,0,2.90749869035873,0,0) translate(0%, 6%);
+		}
+	}
+	h3 {
+		text-align: center;
+		margin-bottom: 70px;
+		position: relative;
+		z-index: 5;
+		.menu-opened & {
+			z-index: 1;
+		}
+	}
+	.explorecity-desc {
+		position: relative;
+		z-index: 10;
+		padding-top: 40px;
+		.menu-opened & {
+			z-index: 1;
+		}
+		h2 {
+			color: $lightYellow;
+			margin-bottom: 38px;
+			letter-spacing: -1px;
+		}
+		p {
+			margin-bottom: 22px;
+			line-height: 2.25;
+		}
+		p + p {
+			margin-bottom: 54px;
+		}
+		.btn-offers {
+			letter-spacing: 1px;
+			border-radius: 20px;
+			padding: 8px 43px;
+			text-transform: uppercase;
+			@include media-breakpoint-down(md) {
+				margin-bottom: 30px;
+			}
+		}
+	}
+	.explorecity-img {
+		position: relative;
+		z-index: 5;
+		.menu-opened & {
+			z-index: 1;
+		}
+		img {
+			position: relative;
+			z-index: 5;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			z-index: 1;
+			width: 104%;
+			height: 103%;
+			border: 13px solid rgb(255, 199, 74);
+			left: 30px;
+			bottom: -52px;
+		}
+	}
+}

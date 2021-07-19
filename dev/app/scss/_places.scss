@@ -1,0 +1,104 @@
+.places {
+	padding: 0 0 26px;
+	position: relative;
+	overflow: hidden;
+	z-index: 5;
+	margin-top: -276px;
+	.menu-opened & {
+		z-index: 1;
+	}
+	.title {
+		text-align: center;
+		margin-bottom: 45px;
+		letter-spacing: -1px;
+		color: $white;
+	}
+	.swiper-slide,
+	.place-card {
+		position: relative;
+		outline: none;
+		img {
+			width: 100%;
+			@include media-breakpoint-down(sm) {
+				display: block;
+				margin: 0 auto;
+			}
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			z-index: 1;
+			transition: all 0.3s ease-in;
+			background-color: rgb(0, 0, 0);
+			opacity: 0.7;
+		}
+		.place-card-desc {
+			position: absolute;
+			z-index: 5;
+			bottom: 0;
+			width: 100%;
+			text-align: center;
+			padding-bottom: 50px;
+			display: none;
+			h3 {
+				color: $white;
+				letter-spacing: -1px;
+				transition: transform .3s ease-in;
+			}
+			p {
+				color: $yellow;
+				transition: transform .3s ease-in;
+			}
+		}
+
+	}
+	.swiper-slide-active,
+	.swiper-slide-next,
+	.swiper-slide-prev {
+		.place-card-desc {
+			display: block;
+			.place-card-offers {
+				display: none;
+			}
+		}
+		&:after {
+			opacity: 0;
+		}
+		&:hover {
+			&:after {
+				opacity: 0.7;
+			}
+			.place-card-desc {
+				padding-bottom: 38px;
+				h3 {
+					// font-size: 4.8rem;
+					letter-spacing: -1px;
+					margin-bottom: 0;
+					transform: scale(1.6) translateY(-48px);
+					@include media-breakpoint-down(xl){
+						transform: scale(1.1) translateY(-20px);
+					}
+				}
+				p {
+					transform: translateY(-69px);
+					color: $white;
+					@include media-breakpoint-down(xl){
+						transform: translateY(-10px);
+					}
+				}
+				.place-card-offers {
+					display: inline-block;
+					padding: 11px 52px;
+					@include media-breakpoint-down(xl) {
+						padding: 5px 10px;
+					}
+				}
+			}
+		}
+	}
+}
